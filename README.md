@@ -6,7 +6,7 @@ The same usage, just like you did in the Scratch.mit.edu.
 
 ![](/icon.png)
 
-Send Message out with "Broadcast (...)" block, when a some state happened. And enbrace some dealing blocks/codes with "When I receive (...)" block. See "Testing and Use" below.
+Send Message out with "Broadcast (...)" block, when a state happened, eg. "level start". And enbrace some dealing blocks/codes with "When I receive (...)" block. See "Testing and Use" below.
 
 ## Features:
 * More than one Receiving event block at same time
