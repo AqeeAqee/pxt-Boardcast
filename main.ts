@@ -13,8 +13,9 @@ namespace broadcast {
     /**
      * Run following code, when received the same Message String
      */
-    //% block="when I receive $msg"
-    export function onEventWithArgs(msg: string, handler: () => void) {
+    //% blockId="receiveBroadcast" block="when I receive $msg"
+    //% blockAllowMultiple=1
+    export function onReceiveBroadcast(msg: string, handler: () => void) {
         if (broadcastHandlers == null)
             broadcastHandlers = [];
         broadcastHandlers.push({ msg: msg, handler: handler });
@@ -23,12 +24,11 @@ namespace broadcast {
     /**
      * Send out Broadcast with Message String
      */
-    //% block="broadcast %msg"
+    //% blockId="broadcast" block="broadcast %msg"
     export function broadcast(msg: string) {
         broadcastHandlers
             .filter(h => h.msg == msg)
-            .forEach(h => h.handler());
-
+            .forEach(h => control.runInParallel(h.handler));
     }
-
 }
+
