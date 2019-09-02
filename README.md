@@ -1,18 +1,24 @@
 # pxt-boardcast
 
-Descriptions:
+## Description:
 
-The same usage, just as you doing in Scratch. Send Message out with "Broadcast (...)" block, when a some state happened. And enbrace some dealing blocks/codes with "When I receive (...)" block.
-* More than one Receiving event block at same time
-* And they running in Parallel, wouldn't blocking each others.
+The same usage, just like you did in the Scratch.mit.edu. 
 
 ![](/icon.png)
+
+Send Message out with "Broadcast (...)" block, when a some state happened. And enbrace some dealing blocks/codes with "When I receive (...)" block. See "Testing and Use" below.
+
+## Features:
+* More than one Receiving event block at same time
+* And they running in Parallel, wouldn't blocking each others.
 
 ## Testing and Use:
 ![](TestBlocks.png)
 
 ## next:
-- [ ] 
+- [ ] Support micro:bit (makecode.microbit.org) at same time.
+- [ ] Add "Broadcast (...) and wait block".
+- [ ] category icon
 
 ## TODO
 
