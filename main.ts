@@ -1,7 +1,7 @@
 // Add your code here
 //% color="#eeaaaa"
 namespace broadcast {
-
+    
     export interface BroadcastHandler {
         msg: string;
         handler: () => void;
@@ -27,7 +27,7 @@ namespace broadcast {
     //% blockId="broadcast" block="broadcast %msg"
     export function broadcast(msg: string) {
         broadcastHandlers
-            .filter(h => h.msg == msg)
+            .filter(h => (h as BroadcastHandler).msg == msg)
             //for micro:bit, deprecated in Arcade
             .forEach(h => control.runInBackground(h.handler));
             //for Arcade
