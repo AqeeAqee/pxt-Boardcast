@@ -28,7 +28,10 @@ namespace broadcast {
     export function broadcast(msg: string) {
         broadcastHandlers
             .filter(h => h.msg == msg)
-            .forEach(h => control.runInParallel(h.handler));
+            //for micro:bit, deprecated in Arcade
+            .forEach(h => control.runInBackground(h.handler));
+            //for Arcade
+            //.forEach(h => control.runInParallel(h.handler));
     }
 }
 
