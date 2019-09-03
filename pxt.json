@@ -2,7 +2,8 @@
     "name": "pxt-boardcast",
     "version": "0.0.0",
     "description": "",
-    "dependencies": {},
+    "dependencies": {
+    },
     "files": [
         "README.md",
         "main.ts"
