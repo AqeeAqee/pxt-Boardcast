@@ -3,7 +3,9 @@
     "version": "0.0.0",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "core": "*",
+        "radio": "*"
     },
     "files": [
         "README.md",
